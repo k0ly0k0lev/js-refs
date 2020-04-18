@@ -25,7 +25,5 @@ function findIntersectionSolutionTwo(arr) {
     return LIST_ONE.filter(res => SET_OF_LIST_TWO.has(res)).join(', ') || false
 }
 
-console.log(findIntersectionSolutionOne(testArr));
-
-
 findIntersectionSolutionOne(testArr)
+findIntersectionSolutionTwo(testArr)
