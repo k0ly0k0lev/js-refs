@@ -19,4 +19,13 @@ function findIntersectionSolutionOne(arr) {
     return FINAL_RESULT.length ? FINAL_RESULT.join(', ') : false
 }
 
+function findIntersectionSolutionTwo(arr) {
+    const [LIST_ONE, LIST_TWO] = arr.map(res => res.split(', ').map(res => parseInt(res)))
+    const SET_OF_LIST_TWO = new Set(LIST_TWO)
+    return LIST_ONE.filter(res => SET_OF_LIST_TWO.has(res)).join(', ') || false
+}
+
+console.log(findIntersectionSolutionOne(testArr));
+
+
 findIntersectionSolutionOne(testArr)
