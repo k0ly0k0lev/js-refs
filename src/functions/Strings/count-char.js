@@ -1,6 +1,6 @@
 const testDataOne = 'fakjehfksjdfsdnf,msdf';
 
-function countCharInString(str, char) {
+function countChar(str, char) {
   let countedChars = 0;
   const string = String(str);
   for (let i = 0; i < string.length; i++) {
@@ -11,5 +11,5 @@ function countCharInString(str, char) {
     : `The chosen ${char} is present ${countedChars} times`;
 }
 
-countCharInString(testDataOne, 'k');
-countCharInString(testDataOne, 1);
+countChar(testDataOne, 'k');
+countChar(testDataOne, 1);
