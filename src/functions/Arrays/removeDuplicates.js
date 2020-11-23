@@ -15,8 +15,23 @@ const testArr = [
   null,
 ];
 
-function revomeDuplicates(arr) {
+const testArrOfObjects = [
+  { id: 1 },
+  { id: 2 },
+  { id: 3 },
+  { id: 2 },
+  { id: 1 },
+];
+
+function removeDuplicates(arr) {
   return Array.from(new Set(arr));
 }
 
-revomeDuplicates(testArr);
+// remove duplicates from an array of objects using filter
+const idSet = new Set();
+
+const removeDuplicatesFromArrayOfObjects = testArrOfObjects.filter((obj) => {
+  const existingId = idSet.has(obj.id);
+  idSet.add(obj.id);
+  return !existingId;
+});
